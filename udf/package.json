@@ -1,0 +1,17 @@
+{
+  "name": "cheerio-as-bqudf",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "bundle": "browserify main.js > _tmp.js && cat global.js _tmp.js | uglifyjs > bundle.js && rm _tmp.js",
+    "upload": "gsutil cp bundle.js gs://${BUCKET}/bundle.js"
+  },
+  "author": "kazuya_kagawa",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^13.1.1",
+    "html-minifier": "^3.2.3",
+    "uglify-js": "^2.7.5",
+    "uglifyjs": "^2.4.10"
+  }
+}
